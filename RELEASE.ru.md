@@ -52,14 +52,21 @@ OMEGA STATION — оригинальный ретро-шутер от перво
 
 Для запуска необходим Python 3.
 
-Из корневого каталога репозитория:
+**Windows:**
+
+```bash
+cd "OMEGA STATION"
+python -m http.server 8000
+```
+
+**Linux:**
 
 ```bash
 cd "OMEGA STATION"
 python3 -m http.server 8000
 ```
 
-Открой в браузере http://localhost:8000.
+Открой в браузере [http://localhost:8000](http://localhost:8000).
 
 Для остановки сервера нажми `Ctrl+C`.
 

@@ -42,14 +42,21 @@ Our goal is to preserve the spirit of classic gaming and bring it into modern op
 
 Python 3 is required.
 
-From the repository root, run:
+**Windows:**
+
+```bash
+cd "OMEGA STATION"
+python -m http.server 8000
+```
+
+**Linux:**
 
 ```bash
 cd "OMEGA STATION"
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000 in your browser.
+Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
 Press `Ctrl+C` to stop the server.
 

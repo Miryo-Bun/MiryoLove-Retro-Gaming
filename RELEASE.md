@@ -52,14 +52,21 @@ The tests were run in Node.js using stubbed browser-related APIs.
 
 Python 3 is required.
 
-From the repository root:
+**Windows:**
+
+```bash
+cd "OMEGA STATION"
+python -m http.server 8000
+```
+
+**Linux:**
 
 ```bash
 cd "OMEGA STATION"
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000 in your browser.
+Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 Press `Ctrl+C` to stop the server.
 

@@ -42,14 +42,21 @@
 
 Для запуска необходим Python 3.
 
-Из корневого каталога репозитория выполни:
+**Windows:**
+
+```bash
+cd "OMEGA STATION"
+python -m http.server 8000
+```
+
+**Linux:**
 
 ```bash
 cd "OMEGA STATION"
 python3 -m http.server 8000
 ```
 
-Затем открой http://localhost:8000 в браузере.
+Затем открой [http://localhost:8000](http://localhost:8000) в браузере.
 
 Для остановки сервера нажми `Ctrl+C`.
 
