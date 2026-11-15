@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMEGA STATION - Level Generation QA</title>
+<style>
+body{margin:0;padding:16px;background:#111;color:#ddd;font:14px monospace}
+h1{font-size:20px;color:#dcaa4b}
+#status{white-space:pre-wrap;margin:12px 0}
+canvas{display:block;max-width:100%;image-rendering:pixelated;background:#080808;border:2px solid #55462f}
+</style>
+</head>
+<body>
+<h1>OMEGA STATION / 100 MAP STRUCTURE REVIEW</h1>
+<div id="status">Generating maps...</div>
+<canvas id="maps" width="1040" height="1050"></canvas>
+<script>window.addEventListener('error',event=>{document.querySelector('#status').textContent=event.message+' '+(event.error?.stack||'')})</script>
+<script type="module">
+import {validateCampaign,validateMaps} from '../js/levels/validation.js';
+import {Level} from '../js/levels/level.js';
+const status=document.querySelector('#status'),canvas=document.querySelector('#maps'),ctx=canvas.getContext('2d');
+try{
+ const report=validateMaps(100,0x5a17);
+ const campaign=validateCampaign();
+ const runtimeFailures=[];
+ for(let i=0;i<36;i++){
+  const level=new Level(i);
+  if(level.g.length!==level.w*level.h||level.g[(level.py|0)*level.w+(level.px|0)]!==0)runtimeFailures.push({level:i,reason:'invalid dimensions or player start'});
+  for(const lift of level.lifts)if(!level.free(lift.a.x,lift.a.y,.1)||!level.free(lift.b.x,lift.b.y,.1))runtimeFailures.push({level:i,reason:'blocked lift endpoint'});
+ }
+ window.levelValidationReport=report;
+ const colors={'#':'#080a0c','.':'#817c68','P':'#64dc82','E':'#e7d34d','D':'#b38b51','R':'#df4545','B':'#4a7fe0','S':'#b652bd'};
+ report.samples.forEach((sample,index)=>{
+  const col=index%10,row=Math.floor(index/10),left=col*104+3,top=row*103+17;
+  const tile=Math.min(96/sample.map[0].length,76/sample.map.length);
+  ctx.fillStyle='#24201a';ctx.fillRect(col*104, row*103, 102, 101);
+  sample.map.forEach((line,y)=>[...line].forEach((cell,x)=>{
+   ctx.fillStyle=colors[cell]||'#171717';
+   ctx.fillRect(left+x*tile,top+y*tile,Math.ceil(tile),Math.ceil(tile));
+  }));
+  ctx.fillStyle='#eee';ctx.font='9px monospace';ctx.fillText(`${index+1} ${sample.metrics.style}`,col*104+3,row*103+11);
+ });
+ status.textContent=JSON.stringify({
+  count:report.count,failures:report.failures.length,campaignLevels:campaign.count,campaignFailures:campaign.failures.length,runtimeFailures:runtimeFailures.length,nearDuplicates:report.nearDuplicates.length,
+  styleCount:Object.keys(report.styles).length,styles:report.styles,summary:report.summary,
+  failureExamples:report.failures.slice(0,8),campaignFailureExamples:campaign.failures.slice(0,8),runtimeFailureExamples:runtimeFailures.slice(0,8),duplicateExamples:report.nearDuplicates.slice(0,8)
+ },null,2);
+}catch(error){status.textContent=error.stack||String(error);throw error}
+</script>
+</body>
+</html>

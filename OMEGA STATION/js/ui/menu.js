@@ -1,22 +1,22 @@
 import {setVol} from '../audio/sfx.js';
 import {DEF,delOld,hasOld,readCfg,readProg,readSave,resetAll,unlocked,writeCfg} from '../save/save.js';
-import {EP,EPD,epPage} from '../episodes/episodes.js';
+import {CAMPAIGN_LEVELS,EP,EPD,LEVEL_NAMES,LEVELS_PER_EPISODE,epPage} from '../episodes/episodes.js';
 const $=id=>document.getElementById(id);
 export function mainMenu(){const ot=$('ot'),op=$('op'),ob=$('ob'),ox=$('ox');ob.style.display='none';const cfg=readCfg();setVol(cfg.vm,cfg.vs);
  const prog=readProg(),sv_=readSave(),any=prog.done.length>0||!!sv_,page=e=>'episodes/'+epPage(e);
  const root=()=>{ot.textContent='OMEGA STATION';op.textContent='MiryoLove Retro Gaming — MiryoLove Product\nRetro games. Classic spirit. Freedom through technology.'+(hasOld()?'\n(Найдено несовместимое старое сохранение — оно не удалено; см. «Настройки».)':'');
   ox.innerHTML='<div class="col"><button id="mNew">НОВАЯ ИГРА</button><button id="mCont"'+(any?'':' disabled')+'>ПРОДОЛЖИТЬ</button><button id="mEp">ЭПИЗОДЫ</button><button id="mSet">НАСТРОЙКИ</button><button id="mCr">ТИТРЫ</button></div>';
   $('mNew').onclick=()=>{if(any&&!confirm('Начать новую кампанию? Прогресс и текущее сохранение будут сброшены.'))return;resetAll();location.href=page(0)+'#level=1'};
-  $('mCont').onclick=()=>{if(sv_)location.href=page(sv_.li/10|0)+'#continue';else{let n=0;while(n<99&&prog.done.includes(n))n++;location.href=page(n/10|0)+'#level='+(n+1)}};
+  $('mCont').onclick=()=>{if(sv_)location.href=page(sv_.li/LEVELS_PER_EPISODE|0)+'#continue';else{let n=0;while(n<CAMPAIGN_LEVELS-1&&prog.done.includes(n))n++;location.href=page(n/LEVELS_PER_EPISODE|0)+'#level='+(n+1)}};
   $('mEp').onclick=episodes;$('mSet').onclick=settings;$('mCr').onclick=credits};
- const episodes=()=>{ot.textContent='ЭПИЗОДЫ';op.textContent='';ox.innerHTML='<div class="grid eps">'+EP.map((nm,e)=>{const dn=prog.done.filter(x=>x>=e*10&&x<e*10+10).length,un=unlocked(prog.done,e*10),h='<b>'+(e+1)+'. '+nm+'</b><i>'+EPD[e]+'</i><u>Пройдено '+dn+'/10 · '+(un?'открыт':'закрыт')+'</u>';return un?'<a class="card" href="'+page(e)+'">'+h+'</a>':'<div class="card lock">'+h+'</div>'}).join('')+'</div><button id="bk">НАЗАД</button>';$('bk').onclick=root};
+ const episodes=()=>{ot.textContent='ЭПИЗОДЫ';op.textContent='';ox.innerHTML='<div class="grid eps">'+EP.map((nm,e)=>{const dn=prog.done.filter(x=>x>=e*LEVELS_PER_EPISODE&&x<(e+1)*LEVELS_PER_EPISODE).length,un=unlocked(prog.done,e*LEVELS_PER_EPISODE),h='<b>'+(e+1)+'. '+nm+'</b><i>'+EPD[e]+'</i><u>Пройдено '+dn+'/'+LEVELS_PER_EPISODE+' · '+(un?'открыт':'закрыт')+'</u>';return un?'<a class="card" href="'+page(e)+'">'+h+'</a>':'<div class="card lock">'+h+'</div>'}).join('')+'</div><button id="bk">НАЗАД</button>';$('bk').onclick=root};
  const settings=()=>{ot.textContent='НАСТРОЙКИ';op.textContent='';settingsPanel(ox,root,null)};
  const credits=()=>{ot.textContent='ТИТРЫ';op.textContent='OMEGA STATION\nMiryoLove Retro Gaming — MiryoLove Product\n\nКод, графика, музыка и звуки созданы программно.\nОригинальная игра: сюжет, персонажи, карты.\nЛицензия: GNU GPL-3.0-only.\n\nRetro games. Classic spirit. Freedom through technology.';ox.innerHTML='<button id="bk">НАЗАД</button>';$('bk').onclick=root};
  root()}
-export function levelSelect(game){const e=game.epi,base=e*10,done=game.done,s=readSave(),dn=done.filter(x=>x>=base&&x<base+10).length;game.st='menu';
- game.show('ЭПИЗОД '+(e+1)+': '+EP[e],EPD[e]+'\nПройдено: '+dn+'/10','ГЛАВНОЕ МЕНЮ',()=>{location.href='../index.html'});
- let h='<div class="grid">';for(let k=0;k<10;k++){const n=base+k,ok=unlocked(done,n),d=done.includes(n);h+='<button class="lv '+(d?'done':ok?'ok':'lock')+'" data-l="'+n+'"'+(ok?'':' disabled')+'>'+(n+1)+'<small>'+(d?'пройден':ok?'открыт':'закрыт')+'</small></button>'}
- game.ox.innerHTML=h+'</div>'+(s&&(s.li/10|0)===e?'<button id="lC" style="margin-top:8px">ПРОДОЛЖИТЬ (УР. '+(s.li+1)+')</button>':'');
+export function levelSelect(game){const e=game.epi,base=e*LEVELS_PER_EPISODE,done=game.done,s=readSave(),dn=done.filter(x=>x>=base&&x<base+LEVELS_PER_EPISODE).length;game.st='menu';
+ game.show(EP[e],EPD[e]+'\nПройдено: '+dn+'/'+LEVELS_PER_EPISODE,'ГЛАВНОЕ МЕНЮ',()=>{location.href='../index.html'});
+ let h='<div class="grid">';for(let k=0;k<LEVELS_PER_EPISODE;k++){const n=base+k,ok=unlocked(done,n),d=done.includes(n);h+='<button class="lv '+(d?'done':ok?'ok':'lock')+'" data-l="'+n+'"'+(ok?'':' disabled')+'>'+(n+1)+'<small>'+LEVEL_NAMES[n]+'</small><small>'+(d?'пройден':ok?'открыт':'закрыт')+'</small></button>'}
+ game.ox.innerHTML=h+'</div>'+(s&&(s.li/LEVELS_PER_EPISODE|0)===e?'<button id="lC" style="margin-top:8px">ПРОДОЛЖИТЬ (УР. '+(s.li+1)+')</button>':'');
  if(game.ox.querySelectorAll)game.ox.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{const n=+b.dataset.l;game.start(n,s&&s.li===n?s:undefined)});
  const c=document.getElementById('lC');if(c)c.onclick=()=>game.start(0,s)}
 

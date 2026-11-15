@@ -6,5 +6,5 @@ export function pick(game,i){const p=game.p,k=i.k,A=(n,m,v,s)=>{if(p.am[n]>=m)re
   if(k==='H'){if(p.hp>=100)return false;p.hp=Math.min(100,p.hp+50);game.say('БОЛЬШАЯ АПТЕЧКА +50');return true}
   if(k==='Q'){p.qd=15;game.say('ДВОЙНОЙ УРОН!');return true}if(k==='V'){p.iv=10;game.say('НЕУЯЗВИМОСТЬ!');return true}if(k==='Z'){p.zs=12;game.say('УСКОРЕНИЕ!');return true}
   if(k==='u'){p.dmg+=.15;game.say('УЛУЧШЕНИЕ: УРОН ОРУЖИЯ +15%');return true}
-  if(k==='w'){p.hv[i.n]=1;p.w=i.n;p.am[WP[i.n].t]+=[0,8,8,40,20,5,40,30,30,120,60,12,6,80][i.n];game.say('НОВОЕ ОРУЖИЕ: '+WP[i.n].n);return true}
+  if(k==='w'){p.hv[i.n]=1;p.w=i.n;if(!WP[i.n].melee)p.am[WP[i.n].t]+=[0,8,8,40,20,5,40,30,30,120,60,12,6,80][i.n]||0;game.say('НОВОЕ ОРУЖИЕ: '+WP[i.n].n);return true}
   if(k==='r')p.kr=true;else p.kb=true;game.say(k==='r'?'КРАСНЫЙ КЛЮЧ!':'СИНИЙ КЛЮЧ!');return true}

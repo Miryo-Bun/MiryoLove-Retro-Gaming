@@ -4,12 +4,12 @@ import {sfx} from '../audio/sfx.js';
 import {rnd} from '../core/util.js';
 import {SP} from '../engine/sprites.js';
 export function env(game,dt){const p=game.p,L=game.lv;updateAllies(game,dt);{const px=p.x|0,py=p.y|0;for(let dy=-4;dy<=4;dy++)for(let dx=-4;dx<=4;dx++){const x=px+dx,y=py+dy;if(x>=0&&y>=0&&x<L.w&&y<L.h&&dx*dx+dy*dy<=16)L.sn[y*L.w+x]=1}}events(game,dt);nav(game,dt);if(game.dlg)game.dlg.t-=dt;let on=false;for(const t of L.tl)if(Math.hypot(t[0]+.5-p.x,t[1]+.5-p.y)<.45){on=true;if(!game.tp0){p.x=t[2]+.5;p.y=t[3]+.5;game.fx.push({x:p.x,y:p.y,t:0,l:.4,s:1});sfx(1000,.3,'sine',.07,-800);sfx(300,.4,'sine',.05,600);game.tp0=true;return}}game.tp0=on;
-  game.ph=(game.ph||0)+dt;if(Math.sin(game.ph*2.5)>.2)for(const t of L.tr)if(Math.hypot(t[0]+.5-p.x,t[1]+.5-p.y)<.55&&(game.tt2=(game.tt2||0)-dt)<=0){game.tt2=.6;game.hurt(8);sfx(200,.1,'square',.06)}
-  if(rnd()<dt*4*(game.fxF??1)&&game.pa.length<90){const a=rnd()*6.28,d=1+rnd()*5;game.pa.push({x:p.x+Math.cos(a)*d,y:p.y+Math.sin(a)*d,vx:0,vy:0,z:.2,vz:.3,t:0,sp:(game.li/10|0)>=3?SP.em:SP.sm,sz:.2})}}
-export function blood(game,x,y,n){for(let k=0;k<n&&game.pa.length<90;k++)game.pa.push({x,y,vx:(rnd()-.5)*2,vy:(rnd()-.5)*2,z:.4+rnd()*.3,vz:rnd()*2,t:0})}
+  game.ph=(game.ph||0)+dt;game.ambT=(game.ambT??18)-dt;if(game.ambT<=0){game.ambT=14+rnd()*14;const ep=game.li/12|0;if(!L.en.some(e=>Math.hypot(e.x-p.x,e.y-p.y)<5)){const f=[48,38,61][ep]+L.motif%17;sfx(f+rnd()*22,.55+rnd()*.7,ep===1?'sine':'sawtooth',.018,-f*.35)}}if(Math.sin(game.ph*2.5)>.2)for(const t of L.tr)if(Math.hypot(t[0]+.5-p.x,t[1]+.5-p.y)<.55&&(game.tt2=(game.tt2||0)-dt)<=0){game.tt2=.6;game.hurt(8);sfx(200,.1,'square',.06)}
+  if(rnd()<dt*4*(game.fxF??1)&&game.pa.length<90){const a=rnd()*6.28,d=1+rnd()*5;game.pa.push({x:p.x+Math.cos(a)*d,y:p.y+Math.sin(a)*d,vx:0,vy:0,z:.2,vz:.3,t:0,sp:(game.li/12|0)>=2?SP.em:SP.sm,sz:.2})}}
+export function blood(game,x,y,n){const L=game.lv,gx=x|0,gy=y|0;if(gx>=0&&gy>=0&&gx<L.w&&gy<L.h){const j=gy*L.w+gx;L.gore[j]=Math.min(255,L.gore[j]+n*12)}for(let k=0;k<n&&game.pa.length<90;k++)game.pa.push({x,y,vx:(rnd()-.5)*2,vy:(rnd()-.5)*2,z:.4+rnd()*.3,vz:rnd()*2,t:0})}
 const EVS={amb:'ЗАСАДА!',alm:'ТРЕВОГА: ПОДКРЕПЛЕНИЕ ЧЕРЕЗ 6 С',blk:'АВАРИЙНОЕ ОСВЕЩЕНИЕ',pwr:'ЭНЕРГОУСТАНОВКА: БРОНЯ +60, ЯЧЕЙКИ +40',rsv:'РЕЗЕРВНОЕ ПИТАНИЕ: СВЕТ ВКЛЮЧЁН, ТАЙНИК ОТКРЫТ'};
 function spawnAround(game,n,types,rmin,rmax){const p=game.p,L=game.lv;let k=0;for(let t=0;t<60&&k<n&&L.en.length<70;t++){const a=rnd()*6.28,d=rmin+rnd()*(rmax-rmin),x=p.x+Math.cos(a)*d,y=p.y+Math.sin(a)*d;if(L.free(x,y,.3)){const q=mkE(x,y,types[k%types.length]);q.al=true;L.en.push(q);game.fx.push({x,y,t:0,l:.4,s:.8});k++}}}
-function events(game,dt){const L=game.lv,p=game.p,ep=game.li/10|0;
+function events(game,dt){const L=game.lv,p=game.p,ep=game.li/12|0;
  for(const v of L.ev||[]){if(v.done||Math.hypot(v.x-p.x,v.y-p.y)>2.8)continue;v.done=1;game.say(EVS[v.k]);p.sc+=100;
   if(v.k==='amb'){spawnAround(game,2+(game.li/15|0),EPF[ep],3,5);sfx(200,.5,'sawtooth',.1,-100)}
   else if(v.k==='alm'){game.alarm=14;game.wave=6;sfx(500,.8,'square',.07,300)}
