@@ -1,0 +1,28 @@
+import sys, os; sys.path.insert(0, os.path.dirname(__file__))
+from harness import *
+srv = serve()
+try:
+    with sync_playwright() as pw:
+        b, pg, logs = open_page(pw)
+        pg.wait_for_function('window.RC && window.RC.G.world', timeout=30000)
+        ev = pg.evaluate
+        print('настройки:', [ (pg.click('#btn-settings'), pg.inner_text('#btn-settings'))[1] for _ in range(3)])
+        pg.click('#btn-new'); pg.click('#char-ok'); pg.wait_for_timeout(600)
+        for _ in range(5): pg.keyboard.press('Space'); pg.wait_for_timeout(250)
+        print('режим после старта:', ev("RC.state.mode"), '| HUD виден:', pg.is_visible('#hud'))
+        z0 = ev("RC.cam.userZoom"); pg.mouse.move(640,360); pg.mouse.wheel(0,300); pg.wait_for_timeout(300); z1 = ev("RC.cam.userZoom"); pg.mouse.wheel(0,-600); pg.wait_for_timeout(300); z2 = ev("RC.cam.userZoom")
+        print('масштаб колесом: %.2f -> %.2f -> %.2f'%(z0,z1,z2), '| zoom камеры', round(ev("RC.cam.zoom"),2))
+        pg.keyboard.press('KeyN'); pg.keyboard.press('KeyN')
+        pg.keyboard.press('Escape'); pg.wait_for_timeout(300)
+        p0 = ev("({t:RC.G.time})"); pg.wait_for_timeout(800); p1 = ev("({t:RC.G.time})")
+        print('пауза: экран виден', pg.is_visible('#pause'), '| режим', ev("RC.state.mode"), '| время идёт:', p1['t']>p0['t'])
+        pg.click('#btn-resume'); pg.wait_for_timeout(300); print('после продолжения:', ev("RC.state.mode"))
+        pg.keyboard.press('Escape'); pg.click('#btn-menu'); pg.wait_for_timeout(800)
+        print('в меню:', ev("RC.state.mode"), '| меню видно', pg.is_visible('#main-menu'))
+        pg.click('#btn-new'); pg.click('#char-prev'); pg.click('#char-ok'); pg.wait_for_timeout(600)
+        for _ in range(5): pg.keyboard.press('Space'); pg.wait_for_timeout(250)
+        print('повторный старт:', ev("({m:RC.state.mode,ch:RC.state.character.id,peds:RC.G.peds.length})"))
+        pg.screenshot(path='/tmp/shot_ui.png')
+        print('ошибки консоли:', [l for l in logs if 'Canvas2D' not in l and 'ERR_NAME' not in l and 'Ready' not in l])
+        b.close()
+finally: srv.terminate()

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroCity — вид сверху</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Шрифт необязателен: без интернета используется системный моноширинный -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <canvas id="c"></canvas>
+
+    <div id="main-menu" class="screen translucent">
+      <div class="panel">
+        <h1 class="logo">RETROCITY</h1>
+        <p class="tag">Открытый город · вид сверху</p>
+        <button class="btn" id="btn-new">Новая игра</button>
+        <button class="btn" id="btn-continue" disabled>Продолжить</button>
+        <button class="btn" id="btn-settings">Качество: среднее</button>
+        <p class="ver">Canvas 2D · без внешних библиотек · оригинальная графика</p>
+      </div>
+    </div>
+
+    <div id="char-select" class="screen hidden">
+      <div class="panel wide">
+        <h2>ВЫБОР ПЕРСОНАЖА</h2>
+        <div class="char-row">
+          <button class="btn small" id="char-prev">◀</button>
+          <div class="char-info">
+            <canvas id="char-portrait" class="portrait" width="160" height="160"></canvas>
+            <h3 id="char-name">—</h3>
+            <p id="char-trait" class="trait">—</p>
+            <p id="char-bio" class="bio">—</p>
+            <p id="char-stats" class="stats">—</p>
+          </div>
+          <button class="btn small" id="char-next">▶</button>
+        </div>
+        <button class="btn" id="char-ok">Выбрать</button>
+        <button class="btn" id="char-back">Назад</button>
+      </div>
+    </div>
+
+    <div id="loading" class="screen"><div class="panel">
+      <h2>Загрузка мира...</h2>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <p id="load-text">Загрузка графики</p>
+    </div></div>
+
+    <div id="hud" class="hidden">
+      <div class="hud-top">
+        <div class="hud-box money">₽ <span id="hud-money">5000</span></div>
+        <div class="hud-box"><span class="lbl">ЖИЗНЬ</span><div class="hbar"><div id="hud-hp"></div></div></div>
+        <div class="hud-box"><span class="lbl">РОЗЫСК</span><div id="hud-stars">★★★★★★</div></div>
+        <div class="hud-box" id="hud-district">Центр</div>
+        <div class="hud-box" id="hud-clock">12:00</div>
+      </div>
+      <div id="hud-weapon">Кулаки [∞]</div>
+      <div id="hud-veh" class="hidden"><div id="veh-name"></div><div class="vbar"><div id="veh-hp"></div></div><div class="vbar fuel"><div id="veh-fuel"></div></div></div>
+      <div id="hud-inv"></div>
+      <div id="hud-mission" class="hidden"><div id="mission-title"></div><div id="mission-obj"></div></div>
+      <div id="hud-hint" class="hidden"></div>
+      <div id="hud-msg" class="hidden"></div>
+      <div id="hud-keys">E — действие · I — инвентарь · H — лечиться · M — миссия · N — карта · ESC — пауза</div>
+      <div id="minimap"><canvas id="minimap-c" width="160" height="160"></canvas></div>
+      <div id="hurt"></div>
+      <div id="wasted" class="hidden"></div>
+    </div>
+
+    <div id="panel" class="screen hidden"><div class="panel wide" id="panel-body"></div></div>
+
+    <div id="pause" class="screen hidden">
+      <div class="panel">
+        <h2>ПАУЗА</h2>
+        <button class="btn" id="btn-resume">Продолжить</button>
+        <button class="btn" id="btn-save">Сохранить</button>
+        <div class="vol-row"><span>Музыка</span><input type="range" id="vol-music" min="0" max="100" value="50"></div>
+        <div class="vol-row"><span>Звуки</span><input type="range" id="vol-sfx" min="0" max="100" value="70"></div>
+        <button class="btn" id="btn-menu">В меню</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

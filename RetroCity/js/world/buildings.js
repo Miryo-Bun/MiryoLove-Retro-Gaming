@@ -1,0 +1,31 @@
+// Типы зданий: внешний вид фасада, интерьер, названия вывесок.
+export const BKIND = {
+  tower:     { band: 2.6, wall: '#7e8798', win: '#9fc4e6', interior: 'office', names: ['ОФИС', 'КОРПОРАЦИЯ', 'БИЗНЕС-ЦЕНТР'], sign: '#2f4e7a' },
+  office:    { band: 2.4, wall: '#8a8f9a', win: '#a9cde8', interior: 'office', names: ['ОФИС', 'КОНТОРА', 'ДЕЛОВОЙ ДОМ'], sign: '#3a5a86' },
+  shop:      { band: 1.9, wall: '#c9b79a', win: '#cfe6f2', interior: 'shop', names: [], sign: '#a0302c', awning: true },
+  restaurant:{ band: 1.9, wall: '#b88a64', win: '#f2dfae', interior: 'restaurant', names: ['ПИЦЦЕРИЯ', 'БУРГЕРНАЯ', 'КАФЕ', 'РЕСТОРАН', 'БАР'], sign: '#5a2a1a', awning: true },
+  mall:      { band: 3.2, wall: '#d6cfc2', win: '#9fd0ea', interior: 'mall', names: ['ТОРГОВЫЙ ЦЕНТР', 'МОЛЛ'], sign: '#b0306a' },
+  block:     { band: 2.8, wall: '#a79b8c', win: '#e9d9a0', interior: 'flat', names: ['ЖИЛОЙ ДОМ'], sign: '#555', balcony: true },
+  house:     { band: 1.3, wall: '#d9c8a8', win: '#cfe0ee', interior: 'home', names: ['Частный дом'], sign: '#555' },
+  mansion:   { band: 2.0, wall: '#ece4d4', win: '#bcd8ee', interior: 'mansion', names: ['Особняк'], sign: '#555', columns: true },
+  hospital:  { band: 2.6, wall: '#e8eef2', win: '#a8d4e6', interior: 'hospital', names: ['БОЛЬНИЦА'], sign: '#c02a32', cross: true },
+  police:    { band: 2.4, wall: '#46608c', win: '#9ec0e6', interior: 'police', names: ['ПОЛИЦИЯ'], sign: '#1d3f8a' },
+  bank:      { band: 2.4, wall: '#d8d0bc', win: '#bcd4e4', interior: 'bank', names: ['БАНК'], sign: '#22603a', columns: true },
+  dealer:    { band: 2.8, wall: '#c8ccd2', win: '#b4def2', interior: 'dealer', names: ['АВТОСАЛОН'], sign: '#c07a10' },
+  garage:    { band: 2.0, wall: '#9a9c9e', win: '#6a6c70', interior: 'garage', names: ['ГАРАЖ'], sign: '#444', roll: true },
+  gas:       { band: 1.8, wall: '#e6e2d6', win: '#bcdcec', interior: 'gas', names: ['АЗС'], sign: '#d83a2e' },
+  carwash:   { band: 1.6, wall: '#b8c4cc', win: '#8ac0e0', interior: null, names: ['АВТОМОЙКА'], sign: '#1e78b4' },
+  factory:   { band: 1.6, wall: '#8c8478', win: '#6a6e72', interior: null, names: [], sign: '#555' },
+  warehouse: { band: 1.8, wall: '#8e9498', win: '#6a6e72', interior: null, names: [], sign: '#555', roll: true },
+  station:   { band: 2.0, wall: '#c8bca0', win: '#bcd8ea', interior: null, names: ['ВОКЗАЛ'], sign: '#7a2a2a' },
+  terminal:  { band: 3.0, wall: '#d0d8e0', win: '#8cc4e8', interior: null, names: ['АЭРОПОРТ'], sign: '#2a5aa0' },
+  hangar:    { band: 1.8, wall: '#9aa2a8', win: '#6a6e72', interior: null, names: [], sign: '#555', roll: true },
+  barracks:  { band: 1.6, wall: '#6a7250', win: '#5a6240', interior: null, names: [], sign: '#444' },
+  barn:      { band: 1.6, wall: '#a8503c', win: '#6a3a2a', interior: null, names: [], sign: '#555', roll: true },
+  farmhouse: { band: 1.3, wall: '#d6c49c', win: '#cfe0ee', interior: 'home', names: ['Фермерский дом'], sign: '#555' },
+};
+export const SHOP_TYPES = [
+  { id: 'grocery', name: 'ПРОДУКТЫ', sign: '#2f7d3a', w: 5 }, { id: 'pharmacy', name: 'АПТЕКА', sign: '#2a8a6a', w: 3 },
+  { id: 'clothes', name: 'ОДЕЖДА', sign: '#7a3a9a', w: 3 }, { id: 'guns', name: 'ОРУЖИЕ', sign: '#4a4a52', w: 1.2 },
+  { id: 'hardware', name: 'ИНСТРУМЕНТ', sign: '#c06a1a', w: 2 },
+];

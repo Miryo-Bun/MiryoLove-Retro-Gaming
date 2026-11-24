@@ -1,83 +1,113 @@
-# OMEGA STATION — Release Notes
+# RetroCity Open World — Release Notes
 
-**MiryoLove Retro Gaming**
+## Release Status
 
-OMEGA STATION is an original retro first-person shooter inspired by classic 1990s FPS games.
+RetroCity is distributed as a standalone top-down 2D game while preserving the existing project structure:
+world map, districts, interiors, vehicles, NPCs, missions, economy, wanted system, saves, and UI.
 
-## Features
+This release is prepared for publication in the MiryoLove Retro Gaming repository.
 
-- 10 episodes and 100 levels.
-- 50 environment themes.
-- 12 location types.
-- 14 weapons.
-- Procedurally generated maps using seeds.
-- Enemies, items, ammunition, and level progression.
-- Navigation assistance.
-- Calm mode for a more comfortable experience.
-- HTML5, CSS3, JavaScript, Canvas API, and Web Audio API.
+## What's New
 
-## Gameplay and Content
-
-The campaign contains 100 levels across 10 episodes. Environment themes change every two levels.
-
-Locations include laboratories, factories, warehouses, technical corridors, hangars, abandoned residential areas, courtyards, ruins, caves, underground complexes, power stations, and boss arenas.
-
-Maps are generated using seeds. The project includes progression checks for exits and key objectives, while secrets are optional.
-
-## Comfort Features
-
-OMEGA STATION includes a Calm mode intended to provide a more comfortable gameplay experience.
-
-The game also includes sensitivity and visual-effect settings. Camera shake and light flickering are disabled in Calm mode, and flashes are limited.
-
-## Testing
-
-A total of 123 automated tests have been reported as passing:
-
-- 66 newly added tests.
-- 57 previously existing tests.
-
-The tests were run in Node.js using stubbed browser-related APIs.
-
-**Important:** These results do not represent full browser testing. Rendering, audio playback, pointer lock, local storage, navigation, performance, and memory usage have not yet been fully verified in real browsers.
-
-## Known Limitations
-
-- Gameplay balance and level design have not undergone human play-testing.
-- The engine uses a flat level structure and does not support true multi-storey rooms.
-- Lifts and moving platforms are not implemented.
-- No new bosses were added in this release.
+- Economy converted to Russian rubles with the `₽` symbol.
+- Save format v4 with validation of required player data.
+- Legacy and corrupted saves are not loaded again.
+- Improved wanted system: threat-based police response, witness reports, escalation, last-known-location tracking,
+  and search behavior after line of sight is lost.
+- Cinematic cutscenes for key campaign moments with camera movement, view changes, subtitles,
+  sound effects, and skip support.
+- Existing campaign, shops, garage, dealership, bank, hospital, police, time-of-day cycle, and weather remain intact.
+- Controllable helicopters retain altitude, fuel, damage, and landing state.
+- Real estate can be purchased and generates passive income.
 
 ## Running the Game
 
-Python 3 is required.
+### Windows
 
-**Windows:**
+```bat
+cd RetroCity
+run.bat
+```
 
-```bash
-cd "OMEGA STATION"
+Or:
+
+```bat
+cd RetroCity
 python -m http.server 8000
 ```
 
-**Linux:**
+### Linux
 
 ```bash
-cd "OMEGA STATION"
+cd RetroCity
+./run.sh
+```
+
+Or:
+
+```bash
+cd RetroCity
 python3 -m http.server 8000
 ```
 
-Open [http://localhost:8000](http://localhost:8000) in your browser.
+Open `http://localhost:8000` in a browser.
 
-Press `Ctrl+C` to stop the server.
+## Controls
+
+| Action | Control |
+|---|---|
+| Move | WASD or arrow keys |
+| Run | Shift |
+| Action / enter vehicle or building | E |
+| Inventory | I |
+| Quick heal | H |
+| Switch weapon | Q / R |
+| Fire or melee | Left mouse or Space |
+| Vehicle control | W/S/A/D, Space |
+| Map | N |
+| Save | F5 |
+| Pause | Esc |
+| Skip cutscene | Space or Enter |
+
+## Saves
+
+- Browser storage primary key: `retrocity3d_save`.
+- A backup key is written when a subsequent save is created.
+- Save progress is validated before loading.
+- Legacy versions are not imported.
+- On the first launch of an updated build, legacy player-progress keys are cleared.
+- Developer settings, source files, and game resources are not player saves and are not removed.
+
+## Pre-Publication Checks
+
+Before release, verify:
+
+- launch through a local HTTP server;
+- loading of the main menu and game world;
+- character selection and starting a new game;
+- creation and reload of a v4 save;
+- rejection of legacy or corrupted saves;
+- saving of missions, money, vehicles, inventory, real estate, and settings;
+- starting and skipping cutscenes;
+- all six wanted levels;
+- arrest, hospital, and wanted clearance;
+- no JavaScript errors in Playwright;
+- no keys, passwords, private data, or temporary player saves in release files.
+
+## Known Limitations
+
+- Full schedules for every NPC are not implemented.
+- Not every mission in the 50-mission campaign has a completely unique cutscene branch.
+- Voice acting is not included; the game uses subtitles and procedural effects.
+- Aircraft are world objects and airport scenery rather than fully controllable vehicles.
+- Weather accumulation and flame animation may depend on device performance.
+
+## Repository Contents
+
+The playable game is located in `RetroCity`.
+
+The repository must not contain browser-local player saves, test scratch files, or private backups.
 
 ## License
 
-OMEGA STATION is distributed under the **GNU General Public License v3.0 only (GPL-3.0-only)** unless otherwise stated.
-
-See the repository's [LICENSE](LICENSE) file for details.
-
----
-
-**MiryoLove Retro Gaming**
-
-_Retro games. Classic spirit. Freedom through technology. ❤️_
+The source code is licensed under GPL-3.0-only unless an individual file or third-party asset states another license.

@@ -14,3 +14,12 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+
+# Python and test artifacts
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+
+# Local release archives
+*.zip

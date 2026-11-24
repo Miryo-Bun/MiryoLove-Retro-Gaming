@@ -1,0 +1,28 @@
+// Шесть героев RetroCity
+
+export const CHARACTERS = [
+  { id:'viktor', name:'Виктор', surname:'Крылов', gender:'male',
+    bio:'Бывший водитель инкассаторской машины. Знает город и не боится риска.',
+    trait:'Умелый водитель', speedMul:1.05, vehicleBonus:1.1,
+    colors:{ body:0x2a4a8a, pants:0x1a2a4a, hair:0x2a1a0a, skin:0xe8b898 } },
+  { id:'marina', name:'Марина', surname:'Волкова', gender:'female',
+    bio:'Быстрая и находчивая. Работала курьером в сомнительных конторах.',
+    trait:'Скороход', speedMul:1.15, vehicleBonus:1.0,
+    colors:{ body:0x8a2a5a, pants:0x3a1a2a, hair:0x4a2010, skin:0xf0c8a8 } },
+  { id:'igor', name:'Игорь', surname:'Смирнов', gender:'male',
+    bio:'Крепкий парень из промзоны. Привык решать вопросы силой.',
+    trait:'Живучий', speedMul:0.95, vehicleBonus:0.95, healthMul:1.25,
+    colors:{ body:0x4a4a4a, pants:0x2a2a2a, hair:0x1a1a1a, skin:0xd4a878 } },
+  { id:'lena', name:'Елена', surname:'Орлова', gender:'female',
+    bio:'Бывшая сотрудница банка. Разбирается в деньгах и лазейках.',
+    trait:'Делец', speedMul:1.0, vehicleBonus:1.05, moneyBonus:1.15,
+    colors:{ body:0x2a6a5a, pants:0x1a3a3a, hair:0x8a6030, skin:0xf0d0b0 } },
+  { id:'ruslan', name:'Руслан', surname:'Газиев', gender:'male',
+    bio:'Уличный механик и угонщик. Любую машину заведёт с пол-оборота.',
+    trait:'Автомеханик', speedMul:1.0, vehicleBonus:1.2,
+    colors:{ body:0x6a3a1a, pants:0x3a2a1a, hair:0x1a0a0a, skin:0xc89868 } },
+  { id:'sofia', name:'София', surname:'Белова', gender:'female',
+    bio:'Тихая снаружи, опасная внутри. Действует скрытно и точно.',
+    trait:'Тень', speedMul:1.1, vehicleBonus:1.0, wantedDecay:1.3,
+    colors:{ body:0x3a2a5a, pants:0x1a1a2a, hair:0x1a1a1a, skin:0xe8c0a0 } },
+];

@@ -1,0 +1,2251 @@
+{
+ "heroes": {
+  "viktor": {
+   "file": "hero_viktor.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  },
+  "marina": {
+   "file": "hero_marina.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  },
+  "igor": {
+   "file": "hero_igor.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  },
+  "lena": {
+   "file": "hero_lena.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  },
+  "ruslan": {
+   "file": "hero_ruslan.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  },
+  "sofia": {
+   "file": "hero_sofia.png",
+   "rows": {
+    "idle": [
+     0,
+     4
+    ],
+    "walk": [
+     1,
+     8
+    ],
+    "run": [
+     2,
+     8
+    ],
+    "punch": [
+     3,
+     4
+    ],
+    "aim": [
+     4,
+     2
+    ],
+    "dead": [
+     5,
+     1
+    ]
+   }
+  }
+ },
+ "npcs": {
+  "file": "npcs.png",
+  "variants": [
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "senior",
+    "scale": 0.95,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "f",
+    "age": "young",
+    "scale": 0.98,
+    "role": "civ"
+   },
+   {
+    "gender": "m",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "cop"
+   },
+   {
+    "gender": "f",
+    "age": "adult",
+    "scale": 1.0,
+    "role": "cop"
+   }
+  ],
+  "layout": {
+   "idle": [
+    0,
+    1
+   ],
+   "dead": [
+    1,
+    1
+   ],
+   "walk": [
+    2,
+    6
+   ],
+   "run": [
+    8,
+    6
+   ]
+  }
+ },
+ "vehicles": {
+  "file": "vehicles.png",
+  "ppu": 20,
+  "types": {
+   "sedan": {
+    "l": 4.5,
+    "w": 2.2,
+    "fw": 0.79,
+    "wl": 14,
+    "wt": 6,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "blue",
+      "rect": [
+       1138,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "silver",
+      "rect": [
+       1242,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       1346,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "black",
+      "rect": [
+       1450,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "red",
+      "rect": [
+       1554,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "green",
+      "rect": [
+       1658,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "gray",
+      "rect": [
+       1762,
+       78,
+       102,
+       56
+      ]
+     },
+     {
+      "name": "teal",
+      "rect": [
+       1866,
+       78,
+       102,
+       56
+      ]
+     }
+    ]
+   },
+   "sport": {
+    "l": 4.3,
+    "w": 2.1,
+    "fw": 0.78,
+    "wl": 14,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "red",
+      "rect": [
+       1432,
+       138,
+       98,
+       54
+      ]
+     },
+     {
+      "name": "yellow",
+      "rect": [
+       1532,
+       138,
+       98,
+       54
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       1632,
+       138,
+       98,
+       54
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       1732,
+       138,
+       98,
+       54
+      ]
+     },
+     {
+      "name": "black",
+      "rect": [
+       1832,
+       138,
+       98,
+       54
+      ]
+     },
+     {
+      "name": "orange",
+      "rect": [
+       1932,
+       138,
+       98,
+       54
+      ]
+     }
+    ]
+   },
+   "taxi": {
+    "l": 4.6,
+    "w": 2.2,
+    "fw": 0.79,
+    "wl": 14,
+    "wt": 6,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "yellow",
+      "rect": [
+       0,
+       138,
+       104,
+       56
+      ]
+     }
+    ]
+   },
+   "van": {
+    "l": 5.2,
+    "w": 2.3,
+    "fw": 0.83,
+    "wl": 15,
+    "wt": 6.5,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "white",
+      "rect": [
+       1778,
+       0,
+       116,
+       58
+      ]
+     },
+     {
+      "name": "gray",
+      "rect": [
+       1896,
+       0,
+       116,
+       58
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       0,
+       78,
+       116,
+       58
+      ]
+     },
+     {
+      "name": "red",
+      "rect": [
+       118,
+       78,
+       116,
+       58
+      ]
+     },
+     {
+      "name": "silver",
+      "rect": [
+       236,
+       78,
+       116,
+       58
+      ]
+     }
+    ]
+   },
+   "truck": {
+    "l": 7.0,
+    "w": 2.5,
+    "fw": 0.9,
+    "wl": 17,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "green",
+      "rect": [
+       1030,
+       0,
+       152,
+       62
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       1184,
+       0,
+       152,
+       62
+      ]
+     },
+     {
+      "name": "orange",
+      "rect": [
+       1338,
+       0,
+       152,
+       62
+      ]
+     }
+    ]
+   },
+   "police": {
+    "l": 4.6,
+    "w": 2.2,
+    "fw": 0.79,
+    "wl": 14,
+    "wt": 6,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "white",
+      "rect": [
+       106,
+       138,
+       104,
+       56
+      ]
+     }
+    ]
+   },
+   "bus": {
+    "l": 9.0,
+    "w": 2.6,
+    "fw": 0.9,
+    "wl": 18,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "orange",
+      "rect": [
+       286,
+       0,
+       192,
+       64
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       480,
+       0,
+       192,
+       64
+      ]
+     },
+     {
+      "name": "red",
+      "rect": [
+       674,
+       0,
+       192,
+       64
+      ]
+     }
+    ]
+   },
+   "suv": {
+    "l": 4.8,
+    "w": 2.3,
+    "fw": 0.8,
+    "wl": 16,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "green",
+      "rect": [
+       354,
+       78,
+       108,
+       58
+      ]
+     },
+     {
+      "name": "black",
+      "rect": [
+       464,
+       78,
+       108,
+       58
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       574,
+       78,
+       108,
+       58
+      ]
+     },
+     {
+      "name": "silver",
+      "rect": [
+       684,
+       78,
+       108,
+       58
+      ]
+     },
+     {
+      "name": "brown",
+      "rect": [
+       794,
+       78,
+       108,
+       58
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       904,
+       78,
+       108,
+       58
+      ]
+     }
+    ]
+   },
+   "muscle": {
+    "l": 4.7,
+    "w": 2.2,
+    "fw": 0.79,
+    "wl": 15,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "red",
+      "rect": [
+       212,
+       138,
+       106,
+       56
+      ]
+     },
+     {
+      "name": "black",
+      "rect": [
+       320,
+       138,
+       106,
+       56
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       428,
+       138,
+       106,
+       56
+      ]
+     },
+     {
+      "name": "orange",
+      "rect": [
+       536,
+       138,
+       106,
+       56
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       644,
+       138,
+       106,
+       56
+      ]
+     }
+    ]
+   },
+   "compact": {
+    "l": 3.6,
+    "w": 1.9,
+    "fw": 0.78,
+    "wl": 12,
+    "wt": 5.5,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "teal",
+      "rect": [
+       372,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "yellow",
+      "rect": [
+       458,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "red",
+      "rect": [
+       544,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       630,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "purple",
+      "rect": [
+       716,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "orange",
+      "rect": [
+       802,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       888,
+       196,
+       84,
+       50
+      ]
+     },
+     {
+      "name": "green",
+      "rect": [
+       974,
+       196,
+       84,
+       50
+      ]
+     }
+    ]
+   },
+   "tank": {
+    "l": 6.5,
+    "w": 3.2,
+    "fw": 0,
+    "wl": 0,
+    "wt": 0,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "olive",
+      "rect": [
+       0,
+       0,
+       142,
+       76
+      ]
+     }
+    ]
+   },
+   "moto": {
+    "l": 2.2,
+    "w": 0.8,
+    "fw": 0,
+    "wl": 0,
+    "wt": 0,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "black",
+      "rect": [
+       1060,
+       196,
+       56,
+       28
+      ]
+     },
+     {
+      "name": "red",
+      "rect": [
+       1118,
+       196,
+       56,
+       28
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       1176,
+       196,
+       56,
+       28
+      ]
+     },
+     {
+      "name": "silver",
+      "rect": [
+       1234,
+       196,
+       56,
+       28
+      ]
+     }
+    ]
+   },
+   "fire": {
+    "l": 7.5,
+    "w": 2.5,
+    "fw": 0.9,
+    "wl": 17,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "red",
+      "rect": [
+       1492,
+       0,
+       162,
+       62
+      ]
+     }
+    ]
+   },
+   "ambulance": {
+    "l": 5.5,
+    "w": 2.3,
+    "fw": 0.82,
+    "wl": 15,
+    "wt": 6.5,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "white",
+      "rect": [
+       1014,
+       78,
+       122,
+       58
+      ]
+     }
+    ]
+   },
+   "pickup": {
+    "l": 5.0,
+    "w": 2.2,
+    "fw": 0.8,
+    "wl": 15,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "red",
+      "rect": [
+       752,
+       138,
+       112,
+       56
+      ]
+     },
+     {
+      "name": "blue",
+      "rect": [
+       866,
+       138,
+       112,
+       56
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       980,
+       138,
+       112,
+       56
+      ]
+     },
+     {
+      "name": "green",
+      "rect": [
+       1094,
+       138,
+       112,
+       56
+      ]
+     },
+     {
+      "name": "brown",
+      "rect": [
+       1208,
+       138,
+       112,
+       56
+      ]
+     }
+    ]
+   },
+   "limo": {
+    "l": 6.2,
+    "w": 2.1,
+    "fw": 0.8,
+    "wl": 14,
+    "wt": 6,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "black",
+      "rect": [
+       0,
+       196,
+       136,
+       54
+      ]
+     },
+     {
+      "name": "white",
+      "rect": [
+       138,
+       196,
+       136,
+       54
+      ]
+     }
+    ]
+   },
+   "swat": {
+    "l": 5.4,
+    "w": 2.4,
+    "fw": 0.83,
+    "wl": 15,
+    "wt": 6.5,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "black",
+      "rect": [
+       1656,
+       0,
+       120,
+       60
+      ]
+     }
+    ]
+   },
+   "mailvan": {
+    "l": 4.8,
+    "w": 2.2,
+    "fw": 0.82,
+    "wl": 14,
+    "wt": 6,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "yellow",
+      "rect": [
+       1322,
+       138,
+       108,
+       56
+      ]
+     }
+    ]
+   },
+   "jeep": {
+    "l": 4.1,
+    "w": 2.0,
+    "fw": 0.8,
+    "wl": 14,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "olive",
+      "rect": [
+       276,
+       196,
+       94,
+       52
+      ]
+     }
+    ]
+   },
+   "mtruck": {
+    "l": 7.4,
+    "w": 2.6,
+    "fw": 0.9,
+    "wl": 17,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "olive",
+      "rect": [
+       868,
+       0,
+       160,
+       64
+      ]
+     }
+    ]
+   },
+   "apc": {
+    "l": 6.4,
+    "w": 2.9,
+    "fw": 0.9,
+    "wl": 14,
+    "wt": 7,
+    "pad": 6,
+    "colors": [
+     {
+      "name": "olive",
+      "rect": [
+       144,
+       0,
+       140,
+       70
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "tiles": {
+  "file": "tiles.png",
+  "size": 64,
+  "cols": 8,
+  "index": {
+   "asphalt": 0,
+   "parking": 1,
+   "sidewalk": 2,
+   "grass": 3,
+   "grass2": 4,
+   "concrete": 5,
+   "gravel": 6,
+   "dirt": 7,
+   "ballast": 8,
+   "plaza": 9,
+   "roof_tar": 10,
+   "roof_red": 11,
+   "roof_brown": 12,
+   "roof_slate": 13,
+   "roof_metal": 14,
+   "roof_light": 15,
+   "roof_green": 16,
+   "water": 17,
+   "ripple": 18,
+   "field_green": 19,
+   "field_gold": 20,
+   "field_plow": 21,
+   "lawn_rich": 22,
+   "runway": 23,
+   "apron": 24,
+   "sand": 25,
+   "quay": 26,
+   "pool": 27,
+   "military_pad": 28,
+   "brick": 29,
+   "tile_mall": 30,
+   "water_deep": 31,
+   "dirt_road": 32,
+   "asphalt_new": 33
+  },
+  "ppu": 16
+ },
+ "props": {
+  "file": "props.png",
+  "items": {
+   "tree_oak": {
+    "rect": [
+     130,
+     382,
+     120,
+     120
+    ],
+    "ppu": 16
+   },
+   "tree_oak2": {
+    "rect": [
+     896,
+     382,
+     104,
+     104
+    ],
+    "ppu": 16
+   },
+   "tree_birch": {
+    "rect": [
+     582,
+     512,
+     88,
+     88
+    ],
+    "ppu": 16
+   },
+   "tree_maple": {
+    "rect": [
+     0,
+     512,
+     96,
+     96
+    ],
+    "ppu": 16
+   },
+   "tree_pine": {
+    "rect": [
+     672,
+     512,
+     80,
+     80
+    ],
+    "ppu": 16
+   },
+   "bush": {
+    "rect": [
+     894,
+     610,
+     38,
+     38
+    ],
+    "ppu": 16
+   },
+   "bush2": {
+    "rect": [
+     626,
+     676,
+     34,
+     34
+    ],
+    "ppu": 16
+   },
+   "bench": {
+    "rect": [
+     456,
+     716,
+     40,
+     15
+    ],
+    "ppu": 16
+   },
+   "bin": {
+    "rect": [
+     498,
+     716,
+     14,
+     14
+    ],
+    "ppu": 16
+   },
+   "hydrant": {
+    "rect": [
+     588,
+     716,
+     12,
+     12
+    ],
+    "ppu": 16
+   },
+   "lamp": {
+    "rect": [
+     514,
+     716,
+     14,
+     14
+    ],
+    "ppu": 16
+   },
+   "manhole": {
+    "rect": [
+     400,
+     716,
+     18,
+     18
+    ],
+    "ppu": 16
+   },
+   "fountain": {
+    "rect": [
+     0,
+     382,
+     128,
+     128
+    ],
+    "ppu": 16
+   },
+   "ac": {
+    "rect": [
+     750,
+     676,
+     36,
+     30
+    ],
+    "ppu": 16
+   },
+   "vent": {
+    "rect": [
+     420,
+     716,
+     16,
+     16
+    ],
+    "ppu": 16
+   },
+   "skylight": {
+    "rect": [
+     662,
+     676,
+     50,
+     34
+    ],
+    "ppu": 16
+   },
+   "watertank": {
+    "rect": [
+     250,
+     610,
+     60,
+     60
+    ],
+    "ppu": 16
+   },
+   "helipad": {
+    "rect": [
+     98,
+     512,
+     96,
+     96
+    ],
+    "ppu": 16
+   },
+   "solar": {
+    "rect": [
+     456,
+     610,
+     100,
+     52
+    ],
+    "ppu": 16
+   },
+   "chimney": {
+    "rect": [
+     588,
+     676,
+     36,
+     36
+    ],
+    "ppu": 16
+   },
+   "stack": {
+    "rect": [
+     398,
+     610,
+     56,
+     56
+    ],
+    "ppu": 16
+   },
+   "silo": {
+    "rect": [
+     422,
+     0,
+     176,
+     176
+    ],
+    "ppu": 16
+   },
+   "container_red": {
+    "rect": [
+     0,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "container_blue": {
+    "rect": [
+     98,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "container_green": {
+    "rect": [
+     196,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "container_orange": {
+    "rect": [
+     294,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "container_gray": {
+    "rect": [
+     392,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "container_yellow": {
+    "rect": [
+     490,
+     676,
+     96,
+     38
+    ],
+    "ppu": 16
+   },
+   "crate": {
+    "rect": [
+     248,
+     716,
+     24,
+     24
+    ],
+    "ppu": 16
+   },
+   "barrel": {
+    "rect": [
+     438,
+     716,
+     16,
+     16
+    ],
+    "ppu": 16
+   },
+   "cone": {
+    "rect": [
+     720,
+     716,
+     10,
+     10
+    ],
+    "ppu": 16
+   },
+   "gate": {
+    "rect": [
+     732,
+     716,
+     84,
+     8
+    ],
+    "ppu": 16
+   },
+   "flowers": {
+    "rect": [
+     124,
+     716,
+     56,
+     26
+    ],
+    "ppu": 16
+   },
+   "sandbox": {
+    "rect": [
+     910,
+     512,
+     64,
+     64
+    ],
+    "ppu": 16
+   },
+   "sign_stop": {
+    "rect": [
+     714,
+     676,
+     34,
+     34
+    ],
+    "ppu": 16
+   },
+   "pk_glow": {
+    "rect": [
+     196,
+     512,
+     96,
+     96
+    ],
+    "ppu": 16
+   },
+   "pk_glow_blue": {
+    "rect": [
+     294,
+     512,
+     96,
+     96
+    ],
+    "ppu": 16
+   },
+   "pk_glow_red": {
+    "rect": [
+     392,
+     512,
+     96,
+     96
+    ],
+    "ppu": 16
+   },
+   "pk_bat": {
+    "rect": [
+     788,
+     676,
+     60,
+     30
+    ],
+    "ppu": 16
+   },
+   "pk_pistol": {
+    "rect": [
+     850,
+     676,
+     60,
+     30
+    ],
+    "ppu": 16
+   },
+   "pk_smg": {
+    "rect": [
+     912,
+     676,
+     60,
+     30
+    ],
+    "ppu": 16
+   },
+   "pk_shotgun": {
+    "rect": [
+     0,
+     716,
+     60,
+     30
+    ],
+    "ppu": 16
+   },
+   "pk_special": {
+    "rect": [
+     62,
+     716,
+     60,
+     30
+    ],
+    "ppu": 16
+   },
+   "pk_health": {
+    "rect": [
+     558,
+     610,
+     44,
+     44
+    ],
+    "ppu": 16
+   },
+   "pk_cash": {
+    "rect": [
+     274,
+     716,
+     40,
+     24
+    ],
+    "ppu": 16
+   },
+   "busstop": {
+    "rect": [
+     182,
+     716,
+     64,
+     26
+    ],
+    "ppu": 16
+   },
+   "cafe_table": {
+    "rect": [
+     604,
+     610,
+     44,
+     44
+    ],
+    "ppu": 16
+   },
+   "umbrella_red": {
+    "rect": [
+     754,
+     512,
+     76,
+     76
+    ],
+    "ppu": 16
+   },
+   "umbrella_blue": {
+    "rect": [
+     832,
+     512,
+     76,
+     76
+    ],
+    "ppu": 16
+   },
+   "pump": {
+    "rect": [
+     602,
+     716,
+     22,
+     12
+    ],
+    "ppu": 16
+   },
+   "monument": {
+    "rect": [
+     852,
+     610,
+     40,
+     40
+    ],
+    "ppu": 16
+   },
+   "crane": {
+    "rect": [
+     650,
+     610,
+     200,
+     44
+    ],
+    "ppu": 16
+   },
+   "ship_cargo": {
+    "rect": [
+     252,
+     382,
+     520,
+     120
+    ],
+    "ppu": 16
+   },
+   "ship_small": {
+    "rect": [
+     0,
+     610,
+     240,
+     64
+    ],
+    "ppu": 16
+   },
+   "plane_jet": {
+    "rect": [
+     0,
+     0,
+     420,
+     380
+    ],
+    "ppu": 16
+   },
+   "plane_small": {
+    "rect": [
+     752,
+     0,
+     150,
+     130
+    ],
+    "ppu": 16
+   },
+   "heli": {
+    "rect": [
+     600,
+     0,
+     150,
+     150
+    ],
+    "ppu": 16
+   },
+   "radar": {
+    "rect": [
+     490,
+     512,
+     90,
+     90
+    ],
+    "ppu": 16
+   },
+   "tent": {
+    "rect": [
+     312,
+     610,
+     84,
+     58
+    ],
+    "ppu": 16
+   },
+   "sandbags": {
+    "rect": [
+     530,
+     716,
+     56,
+     14
+    ],
+    "ppu": 16
+   },
+   "barrier": {
+    "rect": [
+     626,
+     716,
+     64,
+     12
+    ],
+    "ppu": 16
+   },
+   "fence": {
+    "rect": [
+     818,
+     716,
+     64,
+     6
+    ],
+    "ppu": 16
+   },
+   "fence_v": {
+    "rect": [
+     242,
+     610,
+     6,
+     64
+    ],
+    "ppu": 16
+   },
+   "hay": {
+    "rect": [
+     316,
+     716,
+     32,
+     20
+    ],
+    "ppu": 16
+   },
+   "windmill": {
+    "rect": [
+     774,
+     382,
+     120,
+     120
+    ],
+    "ppu": 16
+   },
+   "lounger": {
+    "rect": [
+     692,
+     716,
+     26,
+     12
+    ],
+    "ppu": 16
+   },
+   "billboard": {
+    "rect": [
+     350,
+     716,
+     48,
+     20
+    ],
+    "ppu": 16
+   }
+  }
+ },
+ "interior": {
+  "file": "interior.png",
+  "cell": 32,
+  "ppu": 16,
+  "items": {
+   "vault": [
+    0,
+    0,
+    60,
+    60
+   ],
+   "platform": [
+    62,
+    0,
+    100,
+    56
+   ],
+   "bed_double": [
+    164,
+    0,
+    40,
+    52
+   ],
+   "bed_single": [
+    206,
+    0,
+    28,
+    52
+   ],
+   "rug": [
+    236,
+    0,
+    76,
+    52
+   ],
+   "hosp_bed": [
+    314,
+    0,
+    28,
+    52
+   ],
+   "bunk": [
+    344,
+    0,
+    28,
+    52
+   ],
+   "lift": [
+    374,
+    0,
+    60,
+    44
+   ],
+   "booth": [
+    436,
+    0,
+    56,
+    40
+   ],
+   "table_round": [
+    494,
+    0,
+    38,
+    38
+   ],
+   "floor_wood": [
+    534,
+    0,
+    32,
+    32
+   ],
+   "floor_tile": [
+    568,
+    0,
+    32,
+    32
+   ],
+   "floor_checker": [
+    602,
+    0,
+    32,
+    32
+   ],
+   "floor_carpet_red": [
+    636,
+    0,
+    32,
+    32
+   ],
+   "floor_carpet_blue": [
+    670,
+    0,
+    32,
+    32
+   ],
+   "floor_hospital": [
+    704,
+    0,
+    32,
+    32
+   ],
+   "floor_concrete": [
+    738,
+    0,
+    32,
+    32
+   ],
+   "floor_marble": [
+    772,
+    0,
+    32,
+    32
+   ],
+   "floor_kitchen": [
+    806,
+    0,
+    32,
+    32
+   ],
+   "wall": [
+    840,
+    0,
+    32,
+    32
+   ],
+   "exit_mat": [
+    874,
+    0,
+    32,
+    32
+   ],
+   "table_rect": [
+    908,
+    0,
+    52,
+    30
+   ],
+   "sofa": [
+    962,
+    0,
+    58,
+    28
+   ],
+   "armchair": [
+    0,
+    62,
+    28,
+    28
+   ],
+   "desk": [
+    30,
+    62,
+    52,
+    28
+   ],
+   "reception": [
+    84,
+    62,
+    76,
+    24
+   ],
+   "kitchen_range": [
+    162,
+    62,
+    52,
+    24
+   ],
+   "crate_int": [
+    216,
+    62,
+    24,
+    24
+   ],
+   "fridge": [
+    242,
+    62,
+    22,
+    22
+   ],
+   "stove": [
+    266,
+    62,
+    22,
+    22
+   ],
+   "counter": [
+    290,
+    62,
+    64,
+    22
+   ],
+   "bar_counter": [
+    356,
+    62,
+    96,
+    22
+   ],
+   "toilet": [
+    454,
+    62,
+    18,
+    22
+   ],
+   "wardrobe": [
+    474,
+    62,
+    46,
+    20
+   ],
+   "sink": [
+    522,
+    62,
+    30,
+    20
+   ],
+   "plant": [
+    554,
+    62,
+    20,
+    20
+   ],
+   "bench_tools": [
+    576,
+    62,
+    64,
+    20
+   ],
+   "tires": [
+    642,
+    62,
+    20,
+    20
+   ],
+   "atm": [
+    664,
+    62,
+    18,
+    18
+   ],
+   "terminal": [
+    684,
+    62,
+    22,
+    18
+   ],
+   "shelf_food": [
+    708,
+    62,
+    64,
+    16
+   ],
+   "shelf_drink": [
+    774,
+    62,
+    64,
+    16
+   ],
+   "shelf_med": [
+    840,
+    62,
+    64,
+    16
+   ],
+   "rack_clothes": [
+    906,
+    62,
+    64,
+    16
+   ],
+   "rack_weapons": [
+    0,
+    92,
+    64,
+    16
+   ],
+   "shelf_tools": [
+    66,
+    92,
+    64,
+    16
+   ],
+   "office_chair": [
+    132,
+    92,
+    16,
+    16
+   ],
+   "vending": [
+    150,
+    92,
+    20,
+    16
+   ],
+   "mannequin": [
+    172,
+    92,
+    16,
+    16
+   ],
+   "chair": [
+    190,
+    92,
+    14,
+    14
+   ],
+   "register": [
+    206,
+    92,
+    16,
+    14
+   ],
+   "med_cab": [
+    224,
+    92,
+    36,
+    14
+   ],
+   "oil_barrel": [
+    262,
+    92,
+    14,
+    14
+   ],
+   "stool": [
+    278,
+    92,
+    12,
+    12
+   ],
+   "tv": [
+    292,
+    92,
+    26,
+    10
+   ],
+   "cell_bars": [
+    320,
+    92,
+    64,
+    8
+   ]
+  }
+ },
+ "units": {
+  "ped": 3.0,
+  "frame": 64
+ }
+}
